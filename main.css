@@ -1,0 +1,81 @@
+
+
+#dots {
+    height: 100px;
+    width: 600px;
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dots {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+aside {
+    float: right;
+    color: #29627e;
+    height: 800px;
+    padding-right: 25px;
+    width: 45%;
+}
+
+#reset {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #0a2a56;
+    color: white;
+    border-color: #0a2a56;
+    width: 100px;
+    cursor: pointer;
+}
+
+#helpful-text {
+    display: none;
+    font-size: 18px;
+    padding-top: 15px;
+    color: #D0342C;
+}
+
+#logo {
+    background-image: url("images/ia-logo-back.png");
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 600px;
+    margin-left: 50px;
+}
+#logo > div {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#drop-blue {
+    top: 195px;
+    left: 325px;
+}
+
+#drop-red {
+    top: 220px;
+    left: 505px;
+}
+
+#drop-black-left {
+    top: 338px;
+    left: 96px;
+}
+
+#drop-green {
+    top: 482px;
+    left: 192px;
+}
+
+#drop-black-right {
+    top: 436px;
+    left: 470px;
+}
