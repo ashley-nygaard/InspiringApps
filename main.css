@@ -6,7 +6,7 @@ body > div {
     flex: 1;
 }
 #dots {
-    height: 100px;
+    height: 95px;
     width: 600px;
     margin-top: 50px;
     margin-left: 50px;
@@ -48,7 +48,7 @@ body > div {
     background-repeat: no-repeat;
     height: 600px;
     width: 600px;
-    margin-left: 50px;
+    margin-left: 45px;
 }
 #logo > div {
     height: 100px;
