@@ -8,7 +8,7 @@ The user should be able to click the RESET button at any time to restore the dot
 
 ## Demo
 
-Insert gif or link to demo
+[DEMO](https://ashley-nygaard.github.io/InspiringApps/)
 
 
 ## Notes and Approach
