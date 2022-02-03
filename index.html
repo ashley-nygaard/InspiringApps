@@ -25,19 +25,6 @@
             </div>
 
 
-            <aside>
-
-                <h1> <u> Welcome to the InspiringApps Logo Challenge</u> </h1>
-                <h3> Your objective is to place all the colored logo dots in their correct position.
-                    If you place a dot incorrectly, it will return to the original position.
-                    At any time you want to start the challenge over, simply click the RESET button and you can begin again.
-                </h3>
-                <div>
-                    <button id="reset" onclick="setupDots()">RESET</button>
-                </div>
-                <div id="helpful-text"></div>
-            </aside>
-
 
             <div id="logo">
                 <div id="drop-blue" ondragover="validDrop(event)" ondrop="drop(event, 'blue')"></div>
@@ -47,6 +34,18 @@
                 <div id="drop-black-right" ondragover="validDrop(event)" ondrop="drop(event, 'black')"></div>
 
             </div>
+        </div>
+        <div class="col-2">
+                <h1> <u> Welcome to the InspiringApps Logo Challenge</u> </h1>
+                <h3> Your objective is to place all the colored logo dots in their correct position.
+                    If you place a dot incorrectly, it will return to the original position.
+                    At any time you want to start the challenge over, simply click the RESET button and you can begin again.
+                </h3>
+                <div>
+                    <button id="reset" onclick="setupDots()">RESET</button>
+                </div>
+                <div id="helpful-text"></div>
+
         </div>
     </body>
 </html>

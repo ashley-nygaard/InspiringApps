@@ -1,5 +1,10 @@
-
-
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+body > div {
+    flex: 1;
+}
 #dots {
     height: 100px;
     width: 600px;
@@ -15,12 +20,10 @@
     cursor: pointer;
 }
 
-aside {
-    float: right;
+.col-2 {
     color: #29627e;
-    height: 800px;
-    padding-right: 25px;
-    width: 45%;
+    margin: auto;
+    padding: 50px;
 }
 
 #reset {
