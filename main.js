@@ -21,21 +21,19 @@ function drop(event, color) {
     let showText = document.getElementById("helpful-text");
     let dotSelected = event.dataTransfer.getData("text"); // id of element attached to DRAGEVENT
 
-
-    if(document.getElementById('dots').children.length === 0){
-        showText.style.display = 'block';
-        showText.style.color = "green";
-        showText.innerHTML= "Congratulations!! You did it!"
-    }
-
     if(event.target.parentElement.id !== 'logo' && event.target.parentElement.childElementCount > 0  ){
         return showError('duplicate', showText);
     }
 
     if(dotSelected.includes(color)){
         event.target.appendChild(document.getElementById(dotSelected));
-
+        if(document.getElementById('dots').children.length === 0){
+            showText.style.display = 'block';
+            showText.style.color = "green";
+            showText.innerHTML= "Congratulations!! You did it!"
+        }
     }
+
     else {
         showError('incorrect', showText)
     }
@@ -54,6 +52,6 @@ function showError(type, showText){
     }
     setTimeout(() => {
         showText.style.display = 'none';
-}, 3000);
+    }, 3000);
 }
 
