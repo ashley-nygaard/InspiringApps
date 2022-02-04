@@ -20,17 +20,7 @@ function drop(event, color) {
     event.preventDefault();
     let showText = document.getElementById("helpful-text");
     let dotSelected = event.dataTransfer.getData("text"); // id of element attached to DRAGEVENT
-    if(dotSelected.includes(color)){
-        event.target.appendChild(document.getElementById(dotSelected));
 
-    }
-    else {
-        showText.style.display = 'block';
-        showText.innerHTML= "Nice try, but that was an incorrect guess!"
-        setTimeout(() => {
-            showText.style.display = 'none';
-        }, 3000);
-    }
 
     if(document.getElementById('dots').children.length === 0){
         showText.style.display = 'block';
@@ -38,4 +28,32 @@ function drop(event, color) {
         showText.innerHTML= "Congratulations!! You did it!"
     }
 
+    if(event.target.parentElement.id !== 'logo' && event.target.parentElement.childElementCount > 0  ){
+        return showError('duplicate', showText);
+    }
+
+    if(dotSelected.includes(color)){
+        event.target.appendChild(document.getElementById(dotSelected));
+
+    }
+    else {
+        showError('incorrect', showText)
+    }
+
 }
+
+function showError(type, showText){
+    showText.style.display = 'block';
+    switch(type){
+        case 'incorrect':
+            showText.innerHTML= "Nice try, but that was an incorrect guess!";
+            break;
+        case 'duplicate':
+            showText.innerHTML= "Oops!! There is already a dot there!";
+
+    }
+    setTimeout(() => {
+        showText.style.display = 'none';
+}, 3000);
+}
+
